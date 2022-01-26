@@ -1,4 +1,5 @@
 #!/bin/bash
+
 _get_ziplink () {
     local regex
     regex='(https?)://github.com/.+/.+'
@@ -20,7 +21,7 @@ _get_ziplink () {
         echo "aHR0cHM6Ly9naXRodWIuY29tL3NhbmR5MTcwOS9jYXR1c2VyYm90L2FyY2hpdmUvbWFzdGVyLnppcA==" | base64 -d
     fi
 }
- 
+
 _get_repolink () {
     local regex
     local rlink
@@ -39,26 +40,26 @@ _get_repolink () {
     fi
     echo "$rlink"
 }
- 
- 
+
+
 _run_python_code() {
     python3${pVer%.*} -c "$1"
 }
- 
+
 _run_catpack_git() {
     $(_run_python_code 'from git import Repo
 import sys
- 
+
 OFFICIAL_UPSTREAM_REPO = "https://github.com/Mr-confused/nekopack"
 ACTIVE_BRANCH_NAME = "master"
- 
+
 repo = Repo.init()
 origin = repo.create_remote("temponame", OFFICIAL_UPSTREAM_REPO)
 origin.fetch()
 repo.create_head(ACTIVE_BRANCH_NAME, origin.refs[ACTIVE_BRANCH_NAME])
 repo.heads[ACTIVE_BRANCH_NAME].checkout(True) ')
 }
- 
+
 _run_cat_git() {
     local repolink=$(_get_repolink)
     $(_run_python_code 'from git import Repo
@@ -71,7 +72,7 @@ origin.fetch()
 repo.create_head(ACTIVE_BRANCH_NAME, origin.refs[ACTIVE_BRANCH_NAME])
 repo.heads[ACTIVE_BRANCH_NAME].checkout(True) ')
 }
- 
+
 _set_bot () {
     local zippath
     zippath="catuserbot.zip"
@@ -99,7 +100,7 @@ _set_bot () {
                         . ######:: ##:::: ##:::: ##:::::::
                         :......:::..:::::..:::::..::::::::
     "
- 
+
     echo "
     '##::::'##::'######::'########:'########::'########:::'#######::'########:
      ##:::: ##:'##... ##: ##.....:: ##.... ##: ##.... ##:'##.... ##:... ##..::
@@ -112,6 +113,5 @@ _set_bot () {
     "
     python3 -m userbot
 }
- 
+
 _set_bot
- 
