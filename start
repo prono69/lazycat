@@ -9,7 +9,7 @@ _get_ziplink () {
     elif [[ $UPSTREAM_REPO == "badcat" ]]
     then
         echo "aHR0cHM6Ly9naXRodWIuY29tL2ppc2FuMDkvY2F0dXNlcmJvdC9hcmNoaXZlL21hc3Rlci56aXA=" | base64 -d
-    elif [[ $UPSTREAM_REPO == "pepecat"]]
+    elif [[ $UPSTREAM_REPO == "pepecat" ]]
     then
         echo "aHR0cHM6Ly9naXRodWIuY29tL3Byb25vNjkvcGVwZWNhdC9hcmNoaXZlL21hc3Rlci56aXA=" | base64 -d
     elif [[ $UPSTREAM_REPO =~ $regex ]]
