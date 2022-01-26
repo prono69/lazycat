@@ -1,7 +1,7 @@
 # CatUserbot / PepeCat
 
 A simple Telegram userbot based on Telethon .
-[![catuserbot logo](https://telegra.ph/file/ea76aebd8f8c2e8608755.jpg)](https://t.me/catuserbot_support) 
+[![catuserbot logo](https://telegra.ph/file/2ddae2f90f1265a2306fb.jpg)](https://t.me/catuserbot_support) 
 
 ## Deployment
 > Click on buttons to expands! 
