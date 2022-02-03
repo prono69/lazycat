@@ -57,7 +57,7 @@
       "required": false
     },
     "UPSTREAM_REPO": {
-      "description": "Use either goodcat, badcat or pepecat, Pepecat is best btw .If you need custom deploy then type your git repo link",
+      "description": "Use either goodcat, badcat or https://github.com/prono69/pepecat . Pepecat is best btw .If you need custom deploy then type your git repo link",
       "value": "goodcat",
       "required": false
     }
